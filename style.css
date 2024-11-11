@@ -1,0 +1,151 @@
+/* Основной фон и текст */
+body {
+  background-color: #F8F9FA; /* Светлый кремовый фон */
+  color: #343A40; /* Тёмный серый текст */
+  transition: background-color 0.5s, color 0.5s;
+  min-height: 100vh; /* Высота страницы */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Обертка для содержимого, чтобы футер всегда был внизу */
+.container-fluid {
+  flex-grow: 1; /* Расширяет основной контент */
+}
+
+/* Navbar */
+.navbar {
+  background-color: #002855 !important; /* Глубокий тёмно-синий */
+}
+.dark-mode .navbar {
+  background-color: #001022 !important; /* Глубокий тёмно-синий */
+}
+
+/* Светлый фон для боковой панели */
+.bg-light {
+  background-color: #E9ECEF !important; /* Серо-голубой */
+}
+
+.dark-mode .bg-light {
+  background-color: #212529 !important;
+}
+
+/* Стили для карточек */
+.card {
+  background-color: #E9ECEF; /* Светлый серо-голубой фон */
+  color: #343A40; /* Тёмный серый текст */
+  border-radius: 8px; /* Скругление углов */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Легкая тень */
+  
+}
+
+/* Основные кнопки */
+.btn-primary {
+  background-color: #0056B3; /* Насыщенный синий */
+  border-color: #0056B3;
+  color: #FFF; /* Белый текст */
+}
+
+/* Темный режим */
+body.dark-mode {
+  background-color: #212529; /* Глубокий тёмный серый */
+  color: #EDEDED; /* Светлый текст */
+}
+
+/* Карточки и боковая панель в темном режиме */
+.dark-mode .card, .dark-mode .sidebar {
+  background-color: #343A40; /* Темный серый для карточек и боковой панели */
+  color: #EDEDED; /* Светлый текст */
+}
+
+.dark-mode .list-group-item {
+  background-color: #495057; /* Темный серо-синий для элементов списка в боковой панели */
+  color: #EDEDED; /* Светлый текст */
+}
+
+/* Светлый режим */
+.sidebar h4 {
+  color: #000000; /* Цвет текста */
+  background-color: #ffffff; /* Фон для текста и отступов */
+  padding: 10px; /* Отступ */
+  border-radius: 5px; /* Если нужно сгладить углы */
+}
+
+/* Темный режим */
+.dark-mode .sidebar h4 {
+  color: #ffffff; /* Цвет текста */
+  background-color: #343A40; /* Фон для текста и отступов */
+  padding: 10px; /* Такой же отступ */
+  border-radius: 5px; /* Сохраните скругление, если нужно */
+}
+
+/* Переключатель темы */
+.custom-switch .custom-control-input:checked ~ .custom-control-label::before {
+  background-color: #2b4765; /* Цвет активного переключателя */
+}
+
+.custom-control-label {
+  color: #FFFAFB; /* Белый цвет для текста "Dark Mode" */
+}
+
+/* Добавляем отступы между карточками статей */
+
+/* Адаптивные изменения для разных экранов */
+@media (max-width: 768px) {
+  #articles-container {
+      grid-template-columns: repeat(2, 1fr); /* 2 колонки на экранах меньше 768px */
+  }
+}
+
+@media (max-width: 480px) {
+  #articles-container {
+      grid-template-columns: 1fr; /* 1 колонка на экранах меньше 480px */
+  }
+}
+
+/* Стили для карточек внутри контейнера */
+#articles-container .card {
+  margin-bottom: 20px; /* 20px отступ снизу между карточками */
+}
+
+/* Default Modal Styling (Light Mode) */
+.modal-content {
+  background-color: #ffffff; /* Light background */
+  color: #343A40; /* Dark text */
+}
+
+.dark-mode .modal-content {
+  background-color: #343A40; /* Dark background */
+  color: #EDEDED; /* Light text */
+}
+
+.modal-header {
+  background-color: #f8f9fa; /* Light background for header */
+}
+
+.dark-mode .modal-header {
+  background-color: #212529; /* Dark background for header */
+}
+
+.modal-footer {
+  background-color: #f8f9fa; /* Light background for footer */
+}
+
+.dark-mode .modal-footer {
+  background-color: #212529; /* Dark background for footer */
+}
+
+/* Adjust close button for dark mode */
+.modal-header .close {
+  color: #343A40; /* Dark color for close button */
+}
+
+.dark-mode .modal-header .close {
+  color: #EDEDED; /* Light color for close button */
+}
+img {
+  width: 600px;
+  height: 400px;
+  object-fit: cover;
+}
+
